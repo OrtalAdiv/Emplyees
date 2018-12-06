@@ -1,0 +1,16 @@
+  <ul style="list-style-type:none" *ngFor="let employee of employessList">
+      <button (click)="GetEmployeeRoles(employee.id)" class="button">
+        <li class="id">{{employee.id}}</li>
+        <li class="name">{{employee.name}}</li>
+      </button>
+
+          <form *ngIf="roletoshow.length > 0" >
+              <label class="label">
+                  {{this.roletoshow.roleId}}
+                </label>
+                <label class="label">
+                    {{this.roletoshow.description}}
+                </label>
+          </form>
+
+</ul>
